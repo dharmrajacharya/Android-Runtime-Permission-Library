@@ -21,8 +21,8 @@ Step 2. Add the dependency
 	}
 	
 Step 3. Example
-
- Permission.with(this).setPermissionListener(new PermissionListener() {
+	
+	Permission.with(this).setPermissionListener(new PermissionListener() {
             @Override
             public void onPermissionGranted() {
                 //enterPhoneNumber();
