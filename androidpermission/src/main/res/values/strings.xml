@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Android Permission</string>
+
+    <!--Permission related-->
+    <string name="permission_required">Permissions Required</string>
+    <string name="permission_required_phone">Phone permissions required</string>
+    <string name="permission_required_read_contacts">Read contacts permissions required</string>
+    <string name="permission_required_location">Location permissions required</string>
+
+    <string name="permission_denied">Permission denied</string>
+    <string name="permission_denied_message">If you reject permission, you can not use this service
+        \n\nPlease turn on permissions at \n[Setting] > [Permission]</string>
+
+    <string name="accept">Accept</string>
+    <string name="retry">RE-TRY</string>
+    <string name="i_am_sure">I\'M SURE</string>
+    <string name="permission_setting">Setting</string>
+    <string name="permission_close">Close</string>
+    <string name="permission_confirm">Confirm</string>
+
+    <string name="permission_phone_description">Collect and monitor specific information about your device including your hardware model,
+        operating system information, unique device identifiers like IMEI and serial number,
+        WiFi information and mobile network information to uniquely identify the devices and ensure that unauthorized devices are not able to act on your behalf to generate unsecured transaction.</string>
+
+    <string name="permission_location_description"> Collect and monitor information about the location of your device to show nearest Branch or ATM </string>
+    <string name="permission_read_contacts_description"> Collect and monitor information about the location of your device to show nearest Branch or ATM </string>
+</resources>
