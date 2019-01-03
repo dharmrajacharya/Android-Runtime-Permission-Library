@@ -18,24 +18,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Permission.with(this).setPermissionListener(new PermissionListener() {
+         findViewById(R.id.btnPermission).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPermissionGranted() {
-                //enterPhoneNumber();
-            }
+            public void onClick(View view) {
 
-            @Override
-            public void onPermissionDenied(List<String> deniedPermissions) {
-                //enterPhoneNumber();
-            }})
-                .setRationaleTitle(getString(R.string.permission_required_phone))
-                .setRationaleMessage(getString(R.string.permission_phone_description))
-                .setRationaleConfirmText(getString(R.string.accept))
-                .setDeniedTitle(getString(R.string.permission_denied))
-                .setDeniedMessage(getString(R.string.permission_denied_message))
-                .setGotoSettingButtonText(getString(R.string.permission_setting))
-                .setPermissions(Manifest.permission.READ_PHONE_STATE)
-                .apply();
+                Permission.with(MainActivity.this).setPermissionListener(new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted() {
+                        Toast.makeText(MainActivity.this, "Permission Granted!!!", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onPermissionDenied(List<String> deniedPermissions) {
+                        Toast.makeText(MainActivity.this, "Permission Denied!!!", Toast.LENGTH_SHORT).show();
+                    }})
+                        .setRationaleTitle(getString(R.string.permission_required_phone))
+                        .setRationaleMessage(getString(R.string.permission_phone_description))
+                        .setRationaleConfirmText(getString(R.string.accept))
+                        .setDeniedTitle(getString(R.string.permission_denied))
+                        .setDeniedMessage(getString(R.string.permission_denied_message))
+                        .setGotoSettingButtonText(getString(R.string.permission_setting))
+                        .setPermissions(Manifest.permission.READ_PHONE_STATE)
+                        .apply();
+            }
+        });
 
     }
 }
