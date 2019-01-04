@@ -3,6 +3,8 @@ package com.draj.org.permissionlib;
 import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.lib.permission.Permission;
 import com.lib.permission.PermissionListener;
